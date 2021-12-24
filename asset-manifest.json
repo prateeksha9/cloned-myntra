@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cloned-myntra/static/css/main.f4726bb1.css",
+    "main.css": "/cloned-myntra/static/css/main.e07fadac.css",
     "main.js": "/cloned-myntra/static/js/main.c6077983.js",
     "index.html": "/cloned-myntra/index.html",
-    "main.f4726bb1.css.map": "/cloned-myntra/static/css/main.f4726bb1.css.map",
+    "main.e07fadac.css.map": "/cloned-myntra/static/css/main.e07fadac.css.map",
     "main.c6077983.js.map": "/cloned-myntra/static/js/main.c6077983.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4726bb1.css",
+    "static/css/main.e07fadac.css",
     "static/js/main.c6077983.js"
   ]
 }
