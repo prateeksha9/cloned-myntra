@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cloned-myntra/static/css/main.f77cfc44.css",
+    "main.js": "/cloned-myntra/static/js/main.f9fea012.js",
+    "index.html": "/cloned-myntra/index.html",
+    "main.f77cfc44.css.map": "/cloned-myntra/static/css/main.f77cfc44.css.map",
+    "main.f9fea012.js.map": "/cloned-myntra/static/js/main.f9fea012.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f77cfc44.css",
+    "static/js/main.f9fea012.js"
+  ]
+}
