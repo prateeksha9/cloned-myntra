@@ -481,44 +481,99 @@ code {
 @media only screen and (max-width: 434px) {
   body {
     width: 100%;
-    /* margin-left: 10px; */
     margin-right: 0;
-    /* background-color: black; */
+  }
+  .mainHeader {
+    height: 80px;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: 40px 110px auto;
+    padding-bottom: -20px;
+  }
+
+  .searchInput input {
+    width: 110px;
   }
 }
 
 @media only screen and (max-width: 412px) {
   body {
     width: 110%;
-    /* margin-left: 10px; */
     margin-right: 0;
-    /* background-color: black; */
+  }
+  .mainHeader {
+    height: 80px;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: 40px 35% auto;
+    padding-bottom: -20px;
+  }
+
+  .searchInput input {
+    width: 100%;
+  }
+  .footer {
+    margin-left: -10px;
+    width: 100%;
+  }
+  /* here */
+  .productImage {
+    height: 200px;
+    width: 180px;
+    margin-left: -20px;
   }
 }
 
 @media only screen and (max-width: 371px) {
   body {
     width: 115%;
-    /* margin-left: 10px; */
     margin-right: 0;
-    /* background-color: black; */
+  }
+  .mainHeader {
+    height: 80px;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: 40px 110px auto;
+    padding-bottom: -20px;
+  }
+
+  .searchInput input {
+    width: 110px;
   }
 }
 
 @media only screen and (width> 344px) and (width< 370px) {
   body {
     width: 130%;
-    /* margin-left: 10px; */
     margin-right: 0;
-    /* background-color: black; */
+  }
+  .mainHeader {
+    height: 80px;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: 40px 110px auto;
+    padding-bottom: -20px;
+  }
+
+  .searchInput input {
+    width: 110px;
   }
 }
 
 @media only screen and (max-width: 344px) {
   body {
     width: 120%;
-    /* margin-left: 10px; */
     margin-right: 0;
-    /* background-color: black; */
+  }
+  .mainHeader {
+    height: 80px;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: 40px 110px auto;
+    padding-bottom: -20px;
+  }
+
+  .searchInput input {
+    width: 110px;
   }
 }
