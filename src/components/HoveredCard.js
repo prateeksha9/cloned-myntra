@@ -38,9 +38,33 @@ function HoveredCard(props) {
       <div className="productDetails productDetailsOnHover">
         <div>
           {index === -1 ? (
-            <button onClick={() => handleWishList(product)}>WISHLIST</button>
+            <button onClick={() => handleWishList(product)}>
+              <img
+                src="https://png.pngitem.com/pimgs/s/32-324323_heart-icon-free-vector-like-instagram-white-heart.png"
+                alt="wishlist_icon"
+                className="icon"
+                style={{
+                  marginTop: 2,
+                  height: 20,
+                  width: 20,
+                }}
+              />
+              <span style={{ marginLeft: 8, fontSize: 14, fontWeight: 'bold' }}>
+                WISHLIST
+              </span>
+            </button>
           ) : (
-            <button style={{ background: 'darkgrey' }}>WISHLISTED</button>
+            <button style={{ background: 'darkgrey' }}>
+              <img
+                src="https://png.pngitem.com/pimgs/s/32-324323_heart-icon-free-vector-like-instagram-white-heart.png"
+                alt="wishlist_icon"
+                className="icon"
+                style={{ marginTop: 2, height: 20, width: 20 }}
+              />
+              <span style={{ marginLeft: 8, fontSize: 14, fontWeight: 'bold' }}>
+                WISHLISTED
+              </span>
+            </button>
           )}
         </div>
         <Link to={`/product/${product.id}`} className="links">

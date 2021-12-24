@@ -12,6 +12,7 @@ function SpecificProduct(props) {
   const dispatch = useDispatch();
   // const [showZoom, setShowZoom] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [currentOnMobile, setCurrentImageOnMobile] = React.useState(0);
   const open = Boolean(anchorEl);
   const [image, setImage] = useState('');
 
@@ -62,6 +63,22 @@ function SpecificProduct(props) {
       dispatch(extendCart(newItemInTheCart));
     }
   };
+
+  const moveBack = () => {
+    if (currentOnMobile === 0) {
+      setCurrentImageOnMobile(0);
+    } else {
+      setCurrentImageOnMobile(currentOnMobile - 1);
+    }
+  };
+
+  const moveForward = () => {
+    if (currentOnMobile === product.image.length - 1) {
+      setCurrentImageOnMobile(product.image.length - 1);
+    } else {
+      setCurrentImageOnMobile(currentOnMobile + 1);
+    }
+  };
   // console.log(product);
   return (
     <div>
@@ -76,6 +93,30 @@ function SpecificProduct(props) {
       </div>
       <div className="onlyProductContainer">
         <div className="left">
+          <div
+            className="imagesProductOnlyMobile"
+            style={{
+              backgroundImage: `url(${product.image[currentOnMobile]})`,
+              objectFit: 'fill',
+            }}
+          >
+            <div>
+              <button className="mobileActionButton" onClick={moveBack}>
+                <img
+                  className="mobileAction"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxPGyYrlBxgA19xTMU9P43Heh1AJDGoIsqIcQM0yUNWYP5T1YSrteA_5e4KqlniNSxFFg&usqp=CAU"
+                />
+              </button>
+            </div>
+            <div>
+              <button className="mobileActionButton" onClick={moveForward}>
+                <img
+                  className="mobileAction"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU00BpM9tQWmL5mNv-Jizd86Bp34QT3mWNEQ&usqp=CAU"
+                />
+              </button>
+            </div>
+          </div>
           <div className="imagesProductOnly">
             {product.image.map((image) => (
               <img
@@ -124,17 +165,80 @@ function SpecificProduct(props) {
             </div>
             <div className="productOnlyButton">
               {indexToCart === -1 ? (
-                <button onClick={addToCart}>ADD TO BAG</button>
+                <button onClick={addToCart}>
+                  <img
+                    src="https://i.pinimg.com/originals/95/67/ba/9567bac44b90867dc730858c2c528f01.jpg"
+                    alt="bag_icon"
+                    className="icon"
+                    style={{
+                      marginTop: 2,
+                      height: 20,
+                      width: 20,
+                    }}
+                  />
+
+                  <span
+                    style={{ marginLeft: 8, fontSize: 14, fontWeight: 'bold' }}
+                  >
+                    ADD TO BAG
+                  </span>
+                </button>
               ) : (
-                <button style={{ background: '#FF527B' }}>GO TO BAG</button>
+                <button style={{ background: '#FF527B' }}>
+                  <span
+                    style={{
+                      marginRight: 8,
+                      fontSize: 14,
+                      fontWeight: 'bold',
+                    }}
+                  >
+                    GO TO BAG
+                  </span>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZF5CiuGQqH51NhD5N2B1tEwU-Tm5LYQ1cby3-8C3Cl6dW56suySvFjOZZOAejfVCtTw&usqp=CAU"
+                    alt="go_to_bag_icon"
+                    className="icon"
+                    style={{
+                      marginTop: 2,
+                      height: 20,
+                      width: 20,
+                    }}
+                  />
+                </button>
               )}
 
               {indexToWishlist === -1 ? (
                 <button onClick={() => handleWishList(product)}>
-                  WISHLIST
+                  <img
+                    src="https://png.pngitem.com/pimgs/s/32-324323_heart-icon-free-vector-like-instagram-white-heart.png"
+                    alt="wishlist_icon"
+                    className="icon"
+                    style={{
+                      marginTop: 2,
+                      height: 20,
+                      width: 20,
+                    }}
+                  />
+                  <span
+                    style={{ marginLeft: 8, fontSize: 14, fontWeight: 'bold' }}
+                  >
+                    WISHLIST
+                  </span>
                 </button>
               ) : (
-                <button style={{ background: 'darkgrey' }}>WISHLISTED</button>
+                <button style={{ background: 'darkgrey' }}>
+                  <img
+                    src="https://png.pngitem.com/pimgs/s/32-324323_heart-icon-free-vector-like-instagram-white-heart.png"
+                    alt="wishlist_icon"
+                    className="icon"
+                    style={{ marginTop: 2, height: 20, width: 20 }}
+                  />
+                  <span
+                    style={{ marginLeft: 8, fontSize: 14, fontWeight: 'bold' }}
+                  >
+                    WISHLISTED
+                  </span>
+                </button>
               )}
             </div>
           </div>

@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .links {
@@ -116,6 +117,7 @@ code {
 
 .productcard {
   display: flex;
+  flex: 15%;
   flex-direction: column;
   margin-right: 20px;
   margin-left: 30px;
@@ -123,8 +125,11 @@ code {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto auto; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   border-top: 1px solid;
   /* border-right: 1px solid; */
   border-color: lightgray;
@@ -302,4 +307,218 @@ code {
 .dropdownSec select {
   height: 30px;
   width: 250px;
+}
+
+@media only screen and (width > 768px) {
+  .searchIcon {
+    display: none;
+  }
+  .headerLogomobile {
+    display: none;
+  }
+  .imagesProductOnlyMobile {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  body {
+    width: 95%;
+    /* margin-left: 10px; */
+    margin-right: 0;
+  }
+
+  .mainHeader {
+    width: 100%;
+    /* margin-left: 10px; */
+  }
+  .mainHeader {
+    height: 80px;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: 40px 300px auto;
+    padding-bottom: -20px;
+  }
+
+  .searchInput input {
+    width: 300px;
+  }
+
+  .iconCaption {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  .logoFormobile {
+    height: 30px;
+    width: 30px;
+    margin-top: 25px;
+  }
+  .navTo {
+    display: none;
+  }
+
+  .headerLogo {
+    display: none;
+  }
+  .sideBar {
+    display: none;
+  }
+
+  .App {
+    width: 100%;
+  }
+  .frontPage {
+    width: 100%;
+  }
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -10px;
+  }
+  .productcard {
+    width: 28.2%;
+    padding-right: 62px;
+  }
+  .productcard {
+    margin-right: 0px;
+  }
+
+  .onlyProductContainer {
+    display: flex;
+    /* grid-template-columns: auto auto; */
+    flex-direction: column;
+    /* border-top: 1px solid; */
+  }
+  .right {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .imagesProductOnly {
+    display: none;
+  }
+
+  .imagesProductOnlyMobile {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .mobileActionButton {
+    /* opacity: 0%; */
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-width: 0;
+  }
+  .mobileAction {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 20%;
+    margin-right: 15px;
+    border-width: 0;
+  }
+  .imageSpecificOnMobile {
+    width: 400px;
+    height: 450px;
+    margin-left: -10px;
+  }
+
+  .footer {
+    /* position: fixed; */
+    margin-left: 0px;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    /* color: ; */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footerAction {
+    width: 50%;
+    /* background-color: red; */
+  }
+
+  .footerAction button {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid lightgrey;
+  }
+  .footerAction button:hover {
+    border: 1px solid black;
+  }
+  .dropdownSec select {
+    height: 40px;
+    width: 100%;
+  }
+  .sideBar {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-color: lightgray;
+  }
+}
+
+@media only screen and (max-width: 434px) {
+  body {
+    width: 100%;
+    /* margin-left: 10px; */
+    margin-right: 0;
+    /* background-color: black; */
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  body {
+    width: 110%;
+    /* margin-left: 10px; */
+    margin-right: 0;
+    /* background-color: black; */
+  }
+}
+
+@media only screen and (max-width: 371px) {
+  body {
+    width: 115%;
+    /* margin-left: 10px; */
+    margin-right: 0;
+    /* background-color: black; */
+  }
+}
+
+@media only screen and (width> 344px) and (width< 370px) {
+  body {
+    width: 130%;
+    /* margin-left: 10px; */
+    margin-right: 0;
+    /* background-color: black; */
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  body {
+    width: 120%;
+    /* margin-left: 10px; */
+    margin-right: 0;
+    /* background-color: black; */
+  }
 }

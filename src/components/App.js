@@ -6,6 +6,7 @@ import { data } from '../db';
 
 import FrontPage from './FrontPage';
 import MainHeader from './MainHeader';
+import SideBar from './SideBar';
 import SpecificProduct from './SpecificProduct';
 
 function App() {

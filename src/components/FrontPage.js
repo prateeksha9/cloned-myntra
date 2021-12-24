@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Footer from './Footer';
 import Header from './Header';
 import ProductCard from './ProductCard';
 import SideBar from './SideBar';
@@ -14,6 +15,7 @@ function FrontPage(props) {
   return (
     <div>
       <Header />
+      <Footer />
       <div className="frontPage">
         <SideBar />
         <div className="grid-container">

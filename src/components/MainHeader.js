@@ -9,7 +9,7 @@ import Bag from './Bag';
 function MainHeader(props) {
   const dispatch = useDispatch();
   const [searchProducts, setSearchProducts] = useState('');
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const cart = useSelector((state) => state.cart);
 
@@ -32,6 +32,15 @@ function MainHeader(props) {
             src="https://aartisto.com/wp-content/uploads/2020/11/myntra.png"
             alt="brand_logo"
             className="logo"
+          />
+        </Link>
+      </div>
+      <div className="headerLogomobile">
+        <Link to="/">
+          <img
+            src="https://www.pngitem.com/pimgs/m/467-4678631_arrow-back-icon-png-transparent-png.png"
+            alt="back_icon"
+            className="logoFormobile"
           />
         </Link>
       </div>
@@ -67,6 +76,7 @@ function MainHeader(props) {
           </span>
         </div>
       </div>
+
       <div className="searchInput">
         <input
           type="text"
@@ -75,14 +85,23 @@ function MainHeader(props) {
           onKeyPress={(e) => handleSearch(e)}
         />
       </div>
+
       <div className="myIcons">
+        {/* <div className="searchIcon singleIcon">
+          <img
+            src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png"
+            alt="profile_icon"
+            className="icon"
+            // onClick={handleSearchIcon}
+          />
+        </div> */}
         <div className="singleIcon">
           <img
             src="https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-profile-line-black-icon-png-image_691051.jpg"
             alt="profile_icon"
             className="icon"
           />
-          <span>
+          <span className="iconCaption">
             <strong>Profile</strong>
           </span>
         </div>
@@ -92,7 +111,7 @@ function MainHeader(props) {
             alt="wishlist_icon"
             className="icon"
           />
-          <span>
+          <span className="iconCaption">
             <strong>Wishlist</strong>
           </span>
         </div>
@@ -112,7 +131,7 @@ function MainHeader(props) {
           >
             {cart.length}
           </span>
-          <span style={{ marginTop: 8 }}>
+          <span className="iconCaption" style={{ marginTop: 8 }}>
             <strong>Bag</strong>
           </span>
         </div>
