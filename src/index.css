@@ -272,7 +272,6 @@ code {
 
 .cardBag {
   margin: 10px;
-
   border: 1px solid;
   border-color: lightgrey;
   /* background-color: lightgray; */
@@ -521,6 +520,33 @@ code {
     height: 200px;
     width: 180px;
     margin-left: -20px;
+  }
+
+  .bag {
+    height: 500px;
+    width: 380px;
+  }
+
+  .cardBag {
+    margin: 10px;
+    border: 1px solid;
+    border-color: lightgrey;
+    /* background-color: lightgray; */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .cardBagLeft {
+    padding-right: 10px;
+  }
+
+  .bagAction button {
+    background: white;
+    border-width: 0;
+  }
+
+  .BagItemDetails {
+    width: 70%;
   }
 }
 

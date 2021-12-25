@@ -5,6 +5,7 @@ import { extendCart } from '../action/cart';
 import WishlistExtend from '../action/wishlist';
 import ZoomImage from './ZoomImage';
 import { Popover } from '@material-ui/core';
+import Bag from './Bag';
 
 function SpecificProduct(props) {
   const params = useParams();
@@ -12,8 +13,10 @@ function SpecificProduct(props) {
   const dispatch = useDispatch();
   // const [showZoom, setShowZoom] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorElT, setAnchorElT] = React.useState(null);
   const [currentOnMobile, setCurrentImageOnMobile] = React.useState(0);
   const open = Boolean(anchorEl);
+  const openT = Boolean(anchorElT);
   const [image, setImage] = useState('');
 
   const posts = useSelector((state) => state.posts.products);
@@ -184,7 +187,12 @@ function SpecificProduct(props) {
                   </span>
                 </button>
               ) : (
-                <button style={{ background: '#FF527B' }}>
+                <button
+                  style={{ background: '#FF527B' }}
+                  onClick={(event) => {
+                    setAnchorElT(event.currentTarget);
+                  }}
+                >
                   <span
                     style={{
                       marginRight: 8,
@@ -262,6 +270,24 @@ function SpecificProduct(props) {
         }}
       >
         <ZoomImage picture={image} />
+      </Popover>
+      <Popover
+        anchorEl={anchorElT}
+        open={openT}
+        id={openT ? 'simple-popover' : undefined}
+        onClose={() => {
+          setAnchorElT(null);
+        }}
+        transformOrigin={{
+          horizontal: 'left',
+          vertical: 'top',
+        }}
+        anchorOrigin={{
+          horizontal: 'center',
+          vertical: 'bottom',
+        }}
+      >
+        <Bag />
       </Popover>
     </div>
   );
